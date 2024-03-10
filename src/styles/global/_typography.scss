@@ -1,0 +1,60 @@
+@import 'src/styles/global/vars';
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+h1, .h1{
+  font-weight: 700;
+  font-size: 32px;
+  
+  @media only screen and (max-width: $bp-lg){
+      
+  }
+}
+
+h2, .h2{
+  font-weight: 700;
+  font-size: 28px;
+
+  @media only screen and (max-width: $bp-lg){
+      
+  }
+}
+
+h3, .h3 {
+  font-weight: 700;
+  font-size: 24px;
+
+  @media only screen and (max-width: $bp-lg){
+      
+  }
+}
+
+h4, .h4 {
+  font-weight: 700;
+  font-size: 22px;
+
+  @media only screen and (max-width: $bp-lg){
+      
+  }
+}
+
+h5, .h5 {
+  font-weight: 700;
+  font-size: 20px;
+
+  @media only screen and (max-width: $bp-lg){
+      
+  }
+}
+
+h6, .h6 {
+  font-weight: 700;
+  font-size: 20px;
+
+  @media only screen and (max-width: $bp-lg){
+      
+  }
+}

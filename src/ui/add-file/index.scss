@@ -1,0 +1,32 @@
+@import 'src/styles/global/vars';
+
+.add-file {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+
+  &__icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  &__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+
+    &:focus ~ .add-file__text {
+    }
+  }
+
+  &__text {
+    transition: color .2s ease-in-out;
+
+    &:hover {
+    }
+  }
+}
+

@@ -1,0 +1,93 @@
+@import 'src/styles/global/vars';
+
+.modal {
+
+  display: none;
+
+  &.is-open {
+    display: block;
+  }
+
+  &[aria-hidden="false"] .modal__container {
+    animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1), mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+  }
+  
+  &[aria-hidden="true"] .modal__container {
+    animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1), mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+  }
+  
+
+  &__overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__container {
+    background-color: $white;
+    padding: 30px;
+    max-width: 500px;
+    max-height: 100vh;
+    border-radius: 4px;
+    overflow-y: auto;
+    will-change: transform;
+  }
+
+  &__header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+  }
+
+  &__close {
+    right: 0;
+    background: transparent;
+    border: 0;
+
+    &::before {
+      content: "\2715"; 
+    }
+  }
+
+  &__content {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__footer {
+  }
+
+  &__btn-primary {
+  }
+
+  &__btn {
+  }
+}
+
+@keyframes mmslideIn {
+  from { transform: translateY(15%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes mmslideOut {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10%); }
+}
+
+@keyframes mmfadeIn {
+  from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes mmfadeOut {
+  from { opacity: 1; }
+    to { opacity: 0; }
+}
+

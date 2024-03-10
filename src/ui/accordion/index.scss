@@ -1,0 +1,56 @@
+@import 'src/styles/global/vars';
+
+.accordion {
+
+  &__item {
+    border: 1px solid rgba(0,0,0,.125);
+  }
+
+  &__header {
+  }
+
+  &__button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    padding: 15px 20px;
+    text-align: left;
+
+    &:focus {
+      box-shadow: 0 0 0 1px rgba(0,0,0,.5);
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2523212529'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center;
+      transition: transform .3s ease;
+    }
+
+    &:focus {
+
+    }
+  }
+
+  &__collapse {
+    overflow: hidden;
+  }
+
+  &__content {
+    padding: 15px 20px;
+  }
+
+  &__item.is-active &__button::after {
+    transform:  scale(-1, -1);
+  }
+
+}

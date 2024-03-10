@@ -1,0 +1,55 @@
+@import 'src/styles/global/vars';
+
+.switch {
+
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  &__input {
+    position: relative;
+    appearance: none;
+    border: 1px solid $main-text-color;
+    border-radius: 24px ;
+    width: 48px;
+    height: 24px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: $main-text-color;
+      transition: all .3s ease;
+    }
+
+    &:checked {
+      border-color: $main-accent-color;
+
+      &::before{
+        background-color: $main-accent-color;
+        transform: translate(24px, -50%);
+      }
+    }
+
+    &:not(:disabled) {
+      cursor: pointer;
+    }
+
+    &:disabled {
+      opacity: 0.3;
+
+      & + .checkbox__text {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+  }
+}

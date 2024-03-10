@@ -1,0 +1,49 @@
+@import 'src/styles/global/vars';
+
+@import 'src/styles/global/vars';
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 32px;
+  min-height: 44px;
+  border-radius: 4px;
+  background: $main-accent-color;
+  color: $white;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all .2s ease-in-out;
+
+  &:hover, &:active {
+    background: black;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+  }
+
+  &--lg {
+    padding: 5px 40px;
+    min-height: 52px;
+  }
+
+  &--sm {
+    padding: 5px 24px;
+    min-height: 36px;
+  }
+
+  &--border {
+    border: 1px solid $main-accent-color;
+    background: transparent;
+    color: $main-accent-color;
+
+    &:hover, &:active {
+      background: $main-accent-color;
+      color: $white;
+    }
+  }
+
+}

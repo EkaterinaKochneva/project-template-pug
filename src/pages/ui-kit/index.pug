@@ -1,0 +1,142 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    block title
+    link(rel="stylesheet", href="assets/css/style.min.css")
+    title Ui-Kit 
+    style(type="text/css").
+      .ui-kit {
+        padding: 50px 0;
+      }
+      .ui-kit__title {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 140%;
+        color: #333333;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+      }
+      .ui-kit__section {
+        padding: 20px 0 10px;
+        border-bottom: 1px solid #333333;
+      }
+      .ui-kit__subtitle{
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 140%;
+        color: #333333;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+      }
+      .ui-kit__row {
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .ui-kit__col {
+        width: 30%;
+      }
+  body
+    .wrapper
+      main
+        .container
+          .ui-kit
+            .ui-kit__title Компоненты сайта
+            .ui-kit__section
+              .ui-kit__subtitle Заголовки
+              .ui-kit__block
+                .ui-kit__row
+                  h1 Заголовок H1
+                .ui-kit__row
+                  h2 Заголовок H2
+                .ui-kit__row
+                  h3 Заголовок H3
+                .ui-kit__row
+                  h4 Заголовок H4
+                .ui-kit__row
+                  h5 Заголовок H5
+                .ui-kit__row
+                  h6 Заголовок H6
+
+            .ui-kit__section
+              .ui-kit__subtitle Кнопки
+              .ui-kit__block
+                .ui-kit__row
+                  .ui-kit__col
+                    button Кнопка 1
+                  .ui-kit__col
+                    button Кнопка 2
+                  .ui-kit__col
+                    button Кнопка 3
+            .ui-kit__section
+              .ui-kit__subtitle Чекбоксы
+              .ui-kit__block
+                .ui-kit__row
+                  .ui-kit__col
+                    label.checkbox
+                      input.checkbox__input(type="checkbox")
+                      span.checkbox__text Чекбокс
+                  .ui-kit__col
+                    label.checkbox
+                      input.checkbox__input(type="checkbox", disabled)
+                      span.checkbox__text Чекбокс
+            .ui-kit__section
+              .ui-kit__subtitle Радиокнопки
+              .ui-kit__block
+                .ui-kit__row
+                  .ui-kit__col
+                    label.radio
+                      input.radio__input(type="radio", name="radio-1", checked)
+                      span.radio__text Радиокнопка
+                  .ui-kit__col
+                    label.radio
+                      input.radio__input(type="radio", name="radio-1")
+                      span.radio__text Радиокнопка
+                  .ui-kit__col
+                    label.radio
+                      input.radio__input(type="radio", name="radio-1", disabled)
+                      span.radio__text Радиокнопка
+            .ui-kit__section
+              .ui-kit__subtitle Переключатель
+              .ui-kit__block
+                .ui-kit__row
+                  .ui-kit__col
+                    label.switch
+                      input.switch__input(type="checkbox")
+                      span.switch__text Переключатель
+                  .ui-kit__col
+                    label.switch
+                      input.switch__input(type="checkbox", disabled)
+                      span.switch__text Переключатель
+            .ui-kit__section
+              .ui-kit__subtitle Поля ввода
+              .ui-kit__block
+                .ui-kit__row
+                  .ui-kit__col
+                    label.input
+                      input.input__native(type="text", placeholder="Placeholder")
+                      span.switch__text Лейбл
+                  .ui-kit__col
+                    label.input                      
+                      input.input__native(type="text", placeholder="Placeholder")
+                      span.input__lable Лейбл   
+                      .input__status Статус
+                  .ui-kit__col
+                    label.input
+                      input.input__native(type="text", placeholder="Placeholder", disabled)
+                      span.input__lable Лейбл
+                .ui-kit__row
+                  .ui-kit__col
+                    label.input
+                      textarea.input__native(placeholder="Placeholder")
+                      span.input__lable Лейбл
+                  .ui-kit__col
+                    label.input
+                      textarea.input__native(placeholder="Placeholder", disabled)
+                      span.input__lable Лейбл
+            
+    script(src="assets/js/scripts.min.js")

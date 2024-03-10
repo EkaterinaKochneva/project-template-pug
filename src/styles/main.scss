@@ -1,0 +1,17 @@
+
+//Подключение базовых стилей
+@import "global/normalize.scss";
+// @import "global/fonts.scss";
+@import "global/theme.scss";
+@import "global/typography.scss";
+
+//Подключение ui-компонентов
+@import "../ui/checkbox/";
+@import "../ui/radio/";
+@import "../ui/switch/";
+@import "../ui/input/";
+
+
+//Подключение компонентов
+@import "../components/header/";
+@import "../components/footer/";

@@ -1,0 +1,34 @@
+mixin header(props = { class: [], attrs: {} })
+  -
+    let classes = ['header'];
+    let attrs = props.attrs ? props.attrs : {};
+
+    if (Array.isArray(props.class)) {
+      props.class.forEach((key) => {
+        classes.push(key);
+      })
+    }
+
+  header(class= classes)&attributes(attrs)
+    .container.header__container
+      a(href="/").logo.header__logo Логотип
+      nav.header__nav.top-menu
+        button.top-menu__close Закрыть
+        ul.top-menu__list
+          li.top-menu__item
+            a(href="#").top-menu__link Меню 1
+          li.top-menu__item
+            a(href="#").top-menu__link Меню 2
+          li.top-menu__item
+            a(href="#").top-menu__link Меню 3
+          li.top-menu__item
+            a(href="#").top-menu__link Меню 4
+          li.top-menu__item
+            a(href="#").top-menu__link Меню 5
+      .header__contacts.header-contacts
+        .header-contacts__item
+          a(href="tel:1234567") 1234567
+        .header-contacts__item
+          a(href="mailto:email@mail.com") email@mail.com
+      button.header__burger.burger
+        span Меню
